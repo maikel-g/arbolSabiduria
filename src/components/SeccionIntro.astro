@@ -1,0 +1,33 @@
+---
+interface Props {
+  titulo: String;
+  parrafoGrande: String;
+  parrafoPequeño: String;
+}
+
+const { titulo, parrafoGrande, parrafoPequeño } = Astro.props;
+---
+
+<section class="py-[60px] flex justify-center items-center text-center">
+  <div class="flex justify-center items-center flex-col w-[765px] gap-7">
+    <div class="flex justify-center items-center flex-col gap-4">
+      <h5 class="text-base text-[#333333]">{titulo}</h5>
+      <hr class="border border-[#D99D55] w-24" />
+    </div>
+    <p class="text-[32px] parrafoGrande text-[#333333] w-[624px]">
+      {parrafoGrande}
+    </p>
+    <p class="text-sm text-[#747474]">{parrafoPequeño}</p>
+  </div>
+</section>
+
+<style>
+  h5 {
+    font-family: "Work Sans Variable", sans-serif;
+    font-weight: 400;
+  }
+
+  .parrafoGrande {
+    font-family: "Playfair Display Variable", sans-serif;
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroImage from "../components/HeroImage.astro";
+import SeccionIntro from "../components/SeccionIntro.astro";
+import IndexWave from "../components/IndexWave.astro";
+import Services from "../components/Services.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <HeroImage />
+  <SeccionIntro
+    titulo="UN HOGAR DE ATENCIÓN Y BIENESTAR"
+    parrafoGrande="Desde hace más de cuatro años, nos hemos dedicado a promover la salud, la independencia y la calidad de vida de todos nuestros residentes."
+    parrafoPequeño="En el Hogar Árbol de Sabiduría, nos dedicamos a brindar un cuidado excelente y personalizado para nuestros residentes y sus seres queridos ofreciendo el mejor cuidado posible. "
+  />
+  <main>
+    <IndexWave />
+    <Services />
+  </main>
+</Layout>
