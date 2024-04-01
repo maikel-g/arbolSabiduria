@@ -1,0 +1,69 @@
+---
+import HouseCardIcon from "./icons/HouseCardIcon.astro";
+import ThreeIcon from "./icons/ThreeIcon.astro";
+---
+
+<section
+  class="bg-white py-[60px] flex flex-col w-full justify-center items-center"
+>
+  <div class="max-w-screen-xl flex justify-between w-full">
+    <div
+      class="bg-[#FAF0DF] rounded-xl flex justify-between w-[467px] h-[300px]"
+    >
+      <div class="py-6 px-[18px] flex flex-col justify-between">
+        <HouseCardIcon />
+        <h3 class="text-3xl text-[#E6B55D]">Valores</h3>
+      </div>
+
+      <div class="">
+        <img src="/values.png" class="rounded-r-xl" />
+      </div>
+    </div>
+
+    <p
+      class="text-[#595959] font-light w-[667px] text-pretty text-base 2xl:text-lg"
+    >
+      Nos regimos por un conjunto de valores arraigados en el respeto, la
+      dignidad y el cuidado personalizado. Creemos firmemente en la importancia
+      de brindar un ambiente que fomente el <b class="font-semibold">respeto</b>
+      mutuo y la <b class="font-semibold">empatía</b> , donde cada residente se sienta
+      <b class="font-semibold">valorado</b> y <b class="font-semibold"
+        >apoyado</b
+      > en todo momento. Estos valores fundamentales nos guían en nuestro compromiso
+      de proporcionar la más alta calidad de atención y servicio a nuestros residentes.
+    </p>
+  </div>
+
+  <div class="max-w-screen-xl flex justify-between items-end w-full">
+    <p class="text-[#595959] font-light w-[667px] text-pretty text-lg">
+      En el Hogar Árbol de Sabiduría, nuestra <b class="font-semibold"
+        >filosofía</b
+      > de cuidado se centra en proporcionar un ambiente acogedor donde cada residente
+      sea valorado y tratado con el máximo respeto y comprensión. Buscamos no solo
+      satisfacer las necesidades
+      <b class="font-semibold">físicas</b> y <b class="font-semibold">médicas</b
+      > de nuestros residentes, sino también promover su bienestar emocional y social,
+      creando así un hogar donde se sientan seguros, queridos y parte de una comunidad
+      unida.
+    </p>
+
+    <div
+      class="bg-[#FAF0DF] w-[467px] h-[300px] rounded-xl flex justify-between"
+    >
+      <div class="py-6 px-[18px] flex flex-col justify-between">
+        <ThreeIcon />
+        <h3 class="text-3xl text-[#E6B55D]">Filosofía</h3>
+      </div>
+
+      <div>
+        <img src="/philosophy.png" class="rounded-r-xl" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h3 {
+    font-family: "Playfair Display Variable", sans-serif;
+  }
+</style>

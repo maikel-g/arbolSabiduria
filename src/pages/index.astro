@@ -2,11 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import HeroImage from "../components/HeroImage.astro";
 import SeccionIntro from "../components/SeccionIntro.astro";
-import IndexWave from "../components/IndexWave.astro";
+import MedicalAttentionWave from "../components/MedicalAttentionWave.astro";
 import Services from "../components/Services.astro";
+import Quote from "../components/Quote.astro";
+import ValuesSection from "../components/ValuesSection.astro";
+import ActivitiesWave from "../components/ActivitiesWave.astro";
+import IndexMap from "../components/IndexMap.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Árbol de Sabiduría">
   <HeroImage />
   <SeccionIntro
     titulo="UN HOGAR DE ATENCIÓN Y BIENESTAR"
@@ -14,7 +18,11 @@ import Services from "../components/Services.astro";
     parrafoPequeño="En el Hogar Árbol de Sabiduría, nos dedicamos a brindar un cuidado excelente y personalizado para nuestros residentes y sus seres queridos ofreciendo el mejor cuidado posible. "
   />
   <main>
-    <IndexWave />
+    <MedicalAttentionWave />
     <Services />
+    <Quote />
+    <ValuesSection />
+    <ActivitiesWave />
+    <IndexMap />
   </main>
 </Layout>

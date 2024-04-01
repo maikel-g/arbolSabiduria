@@ -1,0 +1,42 @@
+---
+import Button from "./Button.astro";
+import HouseCardIcon from "./icons/HouseCardIcon.astro";
+---
+
+<hr class="border border-[#D99D55] w-full mt-5" />
+<section class="bg-white py-[60px] flex flex-col justify-center items-center">
+  <div class="max-w-screen-xl flex justify-between w-full">
+    <a href="https://maps.app.goo.gl/bzkR1NMV94W9ix7p8" target="_blank">
+      <img src="/mapa.png" />
+    </a>
+    <div class="text-center flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center">
+        <h3 class="text-4xl">Ven a conocernos</h3>
+        <h4 class="text-lg text-[#959595]">
+          Te invitamos a descubrir el Hogar Árbol de Sabiduría.
+        </h4>
+        <a href="https://maps.app.goo.gl/bzkR1NMV94W9ix7p8" target="_blank">
+          <Button
+            color="733651"
+            paddingVerticales="2"
+            width=""
+            paddingHorizontales="8"
+            menssage="Cómo llegar"
+          />
+        </a>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
+<hr class="border border-[#D99D55] w-full mb-5" />
+<style>
+  h3,
+  h4 {
+    font-family: "Playfair Display Variable", sans-serif;
+  }
+
+  /*  hr {
+    border-width: 1px;
+  } */
+</style>

@@ -1,0 +1,71 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="relative flex justify-center items-center">
+  <img src="/index-wave.png" class="w-full h-full absolute top-0 left-0 z-0" />
+  <div
+    class="max-w-screen-xl pt-[140px] pb-[90px] grid grid-cols-[63%,37%] relative z-10 gap-11"
+  >
+    <div
+      class="div2 text-[#F2F2F2] w-full h-full flex flex-col justify-center items-center"
+    >
+      <div class="pb-4 w-full">
+        <span class="text-3xl"
+          >Descubre Nuestras Actividades para Adultos Mayores</span
+        >
+      </div>
+      <br />
+
+      <div class="flex flex-col gap-4">
+        <p>
+          En el Hogar Árbol de Sabiduría, creemos en la importancia de mantener
+          una vida activa y estimulante para nuestros residentes. Por eso,
+          ofrecemos una amplia variedad de actividades diseñadas para promover
+          el bienestar físico, mental y emocional.
+        </p>
+
+        <p>
+          Nuestras actividades están diseñadas para fomentar la participación y
+          el disfrute, brindando oportunidades para explorar nuevas pasiones y
+          mantenerse conectado con los demás.
+        </p>
+
+        <p>¡Descubre todas nuestras actividades!</p>
+      </div>
+
+      <!--       <button class="bg-[#733651] text-[#fff] w-full py-3 rounded-md mt-4"
+        >Explorar actividades
+      </button> -->
+      <Button
+        color="733651"
+        paddingHorizontales=""
+        paddingVerticales="3"
+        width="w-full"
+        menssage="Explorar actividades"
+      />
+    </div>
+
+    <div class="div1 w-max">
+      <img src="/ancianosjugando-ajedrez.png" class="w-full h-full" />
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  span {
+    font-family: "Playfair Display Variable", sans-serif;
+    text-wrap: balance;
+  }
+  p {
+    font-family: "Work Sans Variable", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #d9d9d9;
+    text-wrap: pretty;
+  }
+</style>

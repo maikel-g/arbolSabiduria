@@ -1,0 +1,72 @@
+---
+import Logo from "./icons/Logo.astro";
+import FacebookIcon from "./icons/FacebookIcon.astro";
+import WhatsAppIcon from "./icons/WhatsAppIcon.astro";
+import LocationIcon from "./icons/LocationIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import PhoneIcon from "./icons/PhoneIcon.astro";
+---
+
+<section
+  class="bg-black pt-[60px] pb-12 flex flex-col justify-center items-center text-white"
+>
+  <div class="md:max-w-screen-xl w-full">
+    <div class="flex flex-col gap-12">
+      <div class="flex justify-between items-start">
+        <div class="flex flex-col gap-6">
+          <Logo width="88px" height="101px" />
+          <div class="flex flex-col gap-2">
+            <h4 class="font-semibold text-[#d2d2d2]">Síguenos en</h4>
+            <div class="flex flex-row gap-2">
+              <a href="https://wa.me/+1234567890"><WhatsAppIcon /></a>
+
+              <a
+                href="https://www.facebook.com/hogararboldesabiduria/"
+                target="_blank"
+              >
+                <FacebookIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white text-lg">Contáctenos</h4>
+          <hr class="border border-[#D99D55] w-20 mt-1" />
+          <div class="pt-5 flex flex-col">
+            <div class="flex gap-3 justify-center items-center h-[38px]">
+              <LocationIcon />
+              <span class=""
+                >Wisconsin Ave, Suite 700 Chevy Chase, Maryland 20815</span
+              >
+            </div>
+            <div class="flex gap-3 justify-center items-center h-[38px]">
+              <MailIcon />
+              <span class="">arboldesabiduria15@gmail.com</span>
+            </div>
+            <div class="flex gap-3 justify-center items-center h-[38px]">
+              <PhoneIcon />
+              <span class="">+506 8488 4329</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <hr class="border border-[#d2d2d2] w-full" />
+      <h5 class="text-[#d2d2d2]">© 2024 All Rights Reserved</h5>
+    </div>
+  </div>
+</section>
+
+<style>
+  span {
+    width: 25ch;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h4 {
+    font-family: "Montserrat", sans-serif;
+  }
+</style>
