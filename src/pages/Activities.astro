@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SeccionIntro from "../components/Index/SeccionIntro.astro";
+import ActivitiesWave from "../components/Activities/ActivitiesWave.astro";
+import ActivitiesTab from "../components/Activities/ActivitiesTab.astro";
+---
+
+<Layout title="Talleres y Actividades" HeaderFontColor="text-[#EEEEEE]">
+  <ActivitiesWave />
+  <SeccionIntro
+    titulo="Descubre Nuestros Talleres y Actividades"
+    parrafoGrande="Nos esforzamos por crear un ambiente donde cada día esté lleno de oportunidades para aprender, crecer y disfrutar de la vida al máximo."
+    parrafoPequeño="Nuestros talleres y actividades están diseñados para estimular el cuerpo, la mente y el espíritu, ofreciendo oportunidades para el aprendizaje, la creatividad y la interacción social. "
+  />
+  <ActivitiesTab />
+</Layout>

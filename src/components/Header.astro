@@ -1,31 +1,41 @@
 ---
 import Logo from "./icons/Logo.astro";
+
+interface Props {
+  fontColor: string;
+  BgColor: string;
+}
+
+const { fontColor, BgColor } = Astro.props;
 ---
 
 <header class="fixed w-full z-20">
-  <nav
-    id="scrollNav"
-    class="flex gap-20 bg-transparent justify-center items-center text-lg py-5"
-  >
-    <a href="#top" class="">Inicio</a>
-    <a href="#top" class="">Atención médica</a>
-    <a href="#top" class="">Actividades</a>
+  <div class="max-w-screen-xl mx-auto">
+    <nav
+      id="scrollNav"
+      <nav
+      id="scrollNav"
+      class=`flex gap-20 bg-${BgColor} justify-between items-center text-lg py-5 ${fontColor} `
+    >
+      <a href="/" class="">Inicio</a>
+      <a href="/MedicalAttention" class="">Atención médica</a>
+      <a href="/Activities" class="">Actividades</a>
 
-    <!-- <img src="/logo.png" alt="" /> -->
-    <Logo width="88px" height="101px" />
+      <!-- <img src="/logo.png" alt="" /> -->
+      <Logo width="88px" height="101px" />
 
-    <a href="#top" class="">Servicios</a>
+      <a href="/Services" class="">Servicios</a>
 
-    <a href="#top" class="">Quiénes somos</a>
+      <a href="/AboutUs" class="">Quiénes somos</a>
 
-    <a href="#top" class="">Contacto</a>
-  </nav>
+      <a href="/AboutUs" class="">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <style>
   a {
     font-family: "Work Sans Variable", sans-serif;
     font-weight: 600;
-    color: #eef2f6;
   }
 </style>

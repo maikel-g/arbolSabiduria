@@ -1,0 +1,135 @@
+---
+import WhatsAppIcon from "../icons/WhatsAppIcon.astro";
+import UserIcon from "../icons/UserIcon.astro";
+import FormMailIcon from "../icons/FormMailIcon.astro";
+---
+
+<hr class="border-2 border-[#D9A851] w-full mt-5" />
+<section class="flex flex-row justify-center items-center py-[60px]">
+  <div class="w-full max-w-screen-xl flex flex-row items-center">
+    <div class="flex flex-col">
+      <h3 class="text-3xl font-playfair pb-8 w-[30ch]">
+        Contáctanos para una Evaluación Personalizada
+      </h3>
+      <p class="font-montse text-base w-[60ch]">
+        Estamos aquí para ayudarte en cada paso del camino. Envíanos un mensaje
+        con tus comentarios y preguntas en el siguiente formulario. Te estaremos
+        contactando de vuelta para aclarar todas tus dudas y proporcionarte la
+        mejor atención posible.
+        <br />
+      </p>
+      <p class="font-montse text-base mt-4 w-[60ch]">
+        Además, ¡puedes chatear directamente con nosotros a través de nuestro
+        canal de WhatsApp!
+      </p>
+
+      <a class="text-left w-fit">
+        <button
+          class={`bg-[#128C7E] text-[#fff]  w-60 h-14  rounded-lg mt-4 flex font-montse text-base justify-center items-center gap-2`}
+        >
+          Chatea por WhatsApp
+          <WhatsAppIcon />
+        </button>
+      </a>
+    </div>
+
+    <div class="w-full flex justify-end">
+      <div class="flex flex-col bg-slate-200 w-[440px] px-8 py-12 rounded-2xl">
+        <form class="max-w-sm flex flex-col gap-4">
+          <!-- Correo -->
+          <div>
+            <label
+              for="email-address-icon"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Correo</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <FormMailIcon />
+              </div>
+              <input
+                type="text"
+                class="min-w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                placeholder="ejemplo@gmail.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Nombre -->
+          <div>
+            <label
+              for="email-address-icon"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Nombre</label
+            >
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+              >
+                <UserIcon />
+              </div>
+              <input
+                type="text"
+                id="email-address-icon"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+          </div>
+
+          <!-- Select -->
+          <div>
+            <label
+              for="countries"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Select your country</label
+            >
+            <select
+              id="countries"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              required
+            >
+              <option>Planes de cuido</option>
+              <option>Servicios</option>
+              <option>Precios</option>
+              <option>Tipos de patologías</option>
+            </select>
+          </div>
+
+          <!-- Area -->
+          <div>
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Mensaje</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Deja tu mensaje..."
+              required
+              style="resize: none;"></textarea>
+          </div>
+          <button
+            type="submit"
+            class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            >Submit</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="border-2 border-[#D9A851] w-full mt-5" />
+
+<!-- <style>
+  select {
+    font-family: "Work Sans Variable", sans-serif;
+    color: #6f6c90;
+  }
+</style> -->

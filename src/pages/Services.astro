@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServicesWave from "../components/Services/ServicesWave.astro";
+import SeccionIntro from "../components/Index/SeccionIntro.astro";
+import SpecialServices from "../components/Services/SpecialServices.astro";
+import SupportingServices from "../components/Services/SupportingServices.astro";
+import DailyServices from "../components/Services/DailyServices.astro";
+---
+
+<Layout title="Árbol de Sabiduría" HeaderFontColor="text-[#364152]">
+  <ServicesWave />
+  <SeccionIntro
+    titulo="Cuidados Personalizados y Atención Integral"
+    parrafoGrande="En Hogar Árbol de Sabiduría, nos dedicamos a proporcionar una variedad de servicios diseñados para promover el bienestar físico, emocional y social de nuestros residentes mayores."
+    parrafoPequeño="Desde atención médica especializada hasta actividades recreativas, estamos comprometidos a brindar el apoyo necesario para que disfruten de una vida plena y digna."
+  />
+  <SpecialServices />
+  <SupportingServices />
+  <DailyServices />
+</Layout>

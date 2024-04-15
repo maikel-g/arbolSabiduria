@@ -5,14 +5,18 @@ import "@fontsource-variable/work-sans";
 // Supports weights 400-900
 import "@fontsource-variable/playfair-display";
 
+// Supports weights 300-800
+import "@fontsource-variable/open-sans";
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
+  HeaderFontColor: string;
 }
 
-const { title } = Astro.props;
+const { title, HeaderFontColor } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,7 +30,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" href="/logo.png" />
   </head>
   <body style="">
-    <Header />
+    <Header fontColor=`${HeaderFontColor}` BgColor="transparent" />
     <slot />
     <Footer />
   </body>

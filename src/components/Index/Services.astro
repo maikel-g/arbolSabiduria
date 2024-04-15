@@ -1,0 +1,63 @@
+---
+import CrossIcon from "../icons/CrossIcon.astro";
+import HandsCrossIcon from "../icons/HandsCrossIcon.astro";
+import PlantIcon from "../icons/PlantIcon.astro";
+---
+
+<section
+  class="bg-white h-[600px] py-[60px] flex flex-col items-center text-center"
+>
+  <h2 class="text-4xl font-bold pb-14">Nuestros Servicios</h2>
+
+  <div class="flex justify-center gap-32 w-full">
+    <div class="supportService flex flex-col items-center gap-6 w-[290px]">
+      <HandsCrossIcon />
+      <div class="flex flex-col items-center gap-4">
+        <h3 class="text-2xl font-medium">Servicios de apoyo</h3>
+        <hr class="border border-[#733651] w-24" />
+        <p class="w-[197px] text-base font-light">
+          Nuestros servicios de apoyo incluyen asistencia en actividades diarias
+          tales como: alimentación, baño, y movilidad, así como un cuidado
+          personalizado.
+        </p>
+      </div>
+    </div>
+
+    <div class="specialService flex flex-col items-center gap-6 w-[290px]">
+      <CrossIcon />
+      <div class="flex flex-col items-center gap-4">
+        <h3 class="text-2xl font-medium">Servicios especializados</h3>
+        <hr class="border border-[#733651] w-24" />
+        <p class="w-[197px] text-base font-light">
+          Nuestro equipo ofrece cuidados médicos especializados, terapias y
+          atención dedicada para abordar las necesidades individuales de cada
+          residente.
+        </p>
+      </div>
+    </div>
+
+    <div class="dailyService flex flex-col items-center gap-8 w-[290px]">
+      <PlantIcon />
+      <div class="flex flex-col items-center gap-4">
+        <h3 class="text-2xl font-medium">Servicios diarios</h3>
+        <hr class="border border-[#733651] w-24" />
+        <p class="w-[197px] text-base font-light">
+          Creamos un ambiente acogedor y familiar. Ofrecemos comidas
+          equilibradas y actividades recreativas para promover la felicidad y
+          vitalidad.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  h2 {
+    font-family: "Playfair Display Variable", sans-serif;
+  }
+
+  h3,
+  p {
+    font-family: "Work Sans Variable", sans-serif;
+  }
+</style>

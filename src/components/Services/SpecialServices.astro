@@ -1,0 +1,163 @@
+<section class="flex flex-col justify-center items-center">
+  <div class="max-w-screen-xl w-full">
+    <h2 class="text-3xl text-center pt-[60px] pb-12 font-playfair">
+      Servicios Especializados
+    </h2>
+
+    <hr class="border-2 border-[#896936] w-full mb-5" />
+
+    <h3 class="text-lg pb-8 font-playfair">
+      Ofrecemos servicios especializados diseñados para satisfacer las
+      necesidades únicas de cada residente. Nuestro equipo altamente calificado
+      garantiza un cuidado médico especializado y atención integral.
+    </h3>
+
+    <div class="text-sm font-medium text-gray-500 px-16">
+      <ul class="flex flex-wrap -mb-px gap-7">
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 botonAtencionMedica"
+            >Atención médica especializada</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Nutrición geriátrica</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Terapia ocupacional y física</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Apoyo psicológico y emocional</button
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="contenido px-16 h-[175px]">
+      <div class="pt-9">
+        <h2 class="text-2xl font-playfair">Su salud, nuestra prioridad</h2>
+        <br />
+        <p class="text-base font-montse">
+          Nos dedicamos a proporcionar una atención médica especializada de la
+          más alta calidad. Nuestro equipo de enfermeras altamente capacitadas y
+          dedicadas está disponible las 24 horas del día para garantizar el
+          bienestar de nuestros residentes. Desde el monitoreo de la salud hasta
+          la administración de medicamentos y la atención de emergencias.
+          Estamos comprometidos a brindar un cuidado médico integral y
+          personalizado para cada individuo.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--  <div class="w-full pt-14">
+    <img src="/services-wave.png" alt="" srcset="" class="w-full" />
+  </div> -->
+  <section
+    class="hero-section mt-14 pt-28 pb-20 w-full flex justify-center items-center gap-52"
+  >
+    <div class="flex justify-center flex-col items-center">
+      <img src="/terapiafisica.png" alt="" srcset="" class="w-full" />
+    </div>
+    <div class="flex justify-center flex-col items-center">
+      <img src="/terapiaocupacional.png" alt="" srcset="" class="w-full" />
+    </div>
+  </section>
+</section>
+
+<style>
+  .hero-section {
+    background-image: url("../services-wave.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Work Sans Variable", sans-serif;
+    color: #d9a756;
+  }
+
+  .active {
+    border-bottom-width: 2px;
+    border-bottom-color: #3b82f6; /* Color azul */
+    color: #3b82f6; /* Color azul */
+  }
+</style>
+
+<script is:inline>
+  // Función para mostrar información y aplicar estilos a la opción seleccionada
+  function mostrarInfo(boton) {
+    // Remover estilos activos de todos los botones
+    var botones = document.querySelectorAll(".text-sm button");
+    botones.forEach(function (boton) {
+      boton.classList.remove("active");
+    });
+
+    // Aplicar estilos activos solo al botón seleccionado
+    boton.classList.add("active");
+
+    // Define el contenido a mostrar para cada opción
+    var contenido = "";
+    switch (boton.textContent) {
+      case "Atención médica especializada":
+        contenido =
+          '<div class="pt-9 h-[175px]">' +
+          '<h2 class="text-2xl font-playfair">Su salud, nuestra prioridad</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Nos dedicamos a proporcionar una atención médica especializada de la más alta calidad. Nuestro equipo de enfermeras altamente capacitadas y dedicadas está disponible las 24 horas del día para garantizar el bienestar de nuestros residentes. Desde el monitoreo de la salud hasta la administración de medicamentos y la atención de emergencias. Estamos comprometidos a brindar un cuidado médico integral y personalizado para cada individuo.";
+
+        "</p>" + "</div>";
+        break;
+      case "Nutrición geriátrica":
+        contenido =
+          '<div class="pt-9 h-[175px]">' +
+          '<h2 class="text-2xl font-playfair">Alimentación diseñada para su bienestar </h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Valoramos la importancia de una dieta equilibrada y nutritiva para la salud y el bienestar de nuestros residentes. Nuestro equipo de nutricionistas geriátricos trabaja en estrecha colaboración con cada individuo y sus familias para diseñar planes de alimentación personalizados que satisfagan sus necesidades dietéticas únicas. Desde la planificación de menús hasta el seguimiento de las preferencias alimenticias y las restricciones médicas. Nos esforzamos por garantizar que cada residente reciba la nutrición adecuada para mantener su salud y vitalidad.";
+        "</p>" + "</div>";
+        break;
+      case "Terapia ocupacional y física":
+        contenido =
+          '<div class="pt-9 h-[175px]">' +
+          '<h2 class="text-2xl font-playfair">Recuperación con enfoque individualizado</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Comprendemos la importancia de la rehabilitación y la terapia para mantener o mejorar la calidad de vida de nuestros residentes. Nuestros terapeutas ocupacionales y físicos están dedicados a ayudar a los residentes a mantener su independencia y funcionalidad en las actividades diarias. A través de programas de ejercicio personalizados, entrenamiento de movilidad y terapias específicas, trabajamos para promover la salud física y el bienestar emocional de cada individuo.";
+        "</p>" + "</div>";
+        break;
+      case "Apoyo psicológico y emocional":
+        contenido =
+          '<div class="pt-9 ">' +
+          '<h2 class="text-2xl font-playfair">Acompañamiento en todo momento</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Enfrentar desafíos de salud mental puede ser difícil, pero en el Hogar Árbol de Sabiduría, nuestros residentes no están solos. Por ello, ofrecemos apoyo psicológico y emocional a aquellos que lo necesitan. Desde el manejo del estrés hasta la atención de condiciones de salud mental más complejas como la demencia y el Alzheimer. Estamos comprometidos a brindar un ambiente de apoyo y comprensión para todos nuestros residentes y sus familias.";
+        "</p>" + "</div>";
+        break;
+    }
+
+    // Actualiza el contenido del div con clase "contenido"
+    var contenidoDiv = document.querySelector(".contenido");
+    if (contenidoDiv) {
+      contenidoDiv.innerHTML = contenido;
+    }
+  }
+
+  // Aplicar estilos activos al botón de Atención médica especializada al cargar la página
+  document.addEventListener("DOMContentLoaded", function () {
+    var botonAtencionMedica = document.querySelector(".botonAtencionMedica");
+    if (botonAtencionMedica) {
+      botonAtencionMedica.classList.add("active");
+    }
+  });
+</script>

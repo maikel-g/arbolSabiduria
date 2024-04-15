@@ -1,0 +1,176 @@
+<section class="flex flex-col justify-center items-center">
+  <div class="max-w-screen-xl w-full">
+    <h2 class="text-3xl text-center pt-[60px] pb-12 font-playfair">
+      Servicios Diarios
+    </h2>
+
+    <hr class="border-2 border-[#896936] w-full mb-5" />
+
+    <h3 class="text-lg pb-8 font-playfair">
+      Nuestros servicios diarios están diseñados para promover la comodidad, la salud y la felicidad en cada etapa del día. Nos esforzamos por brindar un ambiente hogareño donde nuestros residentes se sientan cuidados y valorados en todo momento.
+    </h3>
+
+    <div class="text-sm font-medium text-gray-500 px-16">
+      <ul class="flex flex-wrap -mb-px gap-7">
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 botonVisitas"
+            >Visitas</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Desayuno</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Almuerzo</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Merienda</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Cena</button
+          >
+        </li>
+        <li class="me-2">
+          <button
+            onclick="mostrarInfo(this)"
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+            >Colación nocturna</button
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="serviciosDiarios px-16">
+      <div class="pt-9 h-[165px]">
+        <h2 class="text-2xl font-playfair">Conexiones que importan</h2>
+        <br />
+        <p class="text-base font-montse">
+          Valoramos la importancia de la conexión social y el apoyo de los seres queridos. Por eso, nuestras instalaciones están abiertas para recibir visitas de familiares y amigos en cualquier momento del día. Nos esforzamos por crear un ambiente acogedor donde nuestros residentes puedan compartir momentos especiales con sus seres queridos.
+        </p>
+      </div>
+    </div>
+    <hr class="border-2 border-[#896936] w-full mt-8 mb-20" />
+  </div>
+
+</section>
+
+<style>
+  .hero-section {
+    background-image: url("../services-wave.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: "Work Sans Variable", sans-serif;
+    color: #d9a756;
+  }
+
+  .active {
+    border-bottom-width: 2px;
+    border-bottom-color: #3b82f6; /* Color azul */
+    color: #3b82f6; /* Color azul */
+  }
+</style>
+
+<script is:inline>
+  // Función para mostrar información y aplicar estilos a la opción seleccionada
+  function mostrarInfo(boton) {
+    // Remover estilos activos de todos los botones
+    var botones = document.querySelectorAll(".text-sm button");
+    botones.forEach(function (boton) {
+      boton.classList.remove("active");
+    });
+
+    // Aplicar estilos activos solo al botón seleccionado
+    boton.classList.add("active");
+
+    // Define el contenido a mostrar para cada opción
+    var contenido = "";
+    switch (boton.textContent) {
+      case "Visitas":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Conexiones que importan</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Valoramos la importancia de la conexión social y el apoyo de los seres queridos. Por eso, nuestras instalaciones están abiertas para recibir visitas de familiares y amigos en cualquier momento del día. Nos esforzamos por crear un ambiente acogedor donde nuestros residentes puedan compartir momentos especiales con sus seres queridos.";
+
+        "</p>" + "</div>";
+        break;
+      case "Desayuno":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Comienza el día con energía</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Comenzamos cada día con un desayuno nutritivo y delicioso que brinda energía para enfrentar el día por delante. Nuestro equipo de cocina se esfuerza por ofrecer una variedad de opciones saludables y apetitosas que satisfagan los gustos individuales de nuestros residentes.";
+        "</p>" + "</div>";
+        break;
+      case "Almuerzo":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Recuperación con enfoque individualizado</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Falta!";
+        "</p>" + "</div>";
+        break;
+      case "Merienda":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Un descanso para recargar energías</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Durante la mañana y la tarde, ofrecemos meriendas ligeras y nutritivas para mantener la energía y el buen ánimo de nuestros residentes. Ya sea una fruta fresca, un yogur o un refrigerio casero. Nuestras meriendas son una oportunidad para disfrutar de un momento de descanso y satisfacer el apetito entre comidas principales.";
+        "</p>" + "</div>";
+        break;
+      case "Cena":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Cierre el día con una comida reconfortante</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Finalizamos el día con una cena reconfortante y nutritiva que brinda la satisfacción de un día bien vivido. Nuestro menú de cena ofrece una variedad de opciones saludables y sabrosas que garantizan que nuestros residentes terminen el día con una sonrisa en el rostro y el estómago satisfecho.";
+        "</p>" + "</div>";
+        break;
+      case "Colación nocturna":
+        contenido =
+          '<div class="pt-9 h-[165px]">' +
+          '<h2 class="text-2xl font-playfair">Acompañamiento en todo momento</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse">' +
+          "Falta!";
+        "</p>" + "</div>";
+        break;
+    }
+
+    // Actualiza el contenido del div con clase "contenido"
+    var contenidoDiv = document.querySelector(".serviciosDiarios");
+    if (contenidoDiv) {
+      contenidoDiv.innerHTML = contenido;
+    }
+  }
+
+  // Aplicar estilos activos al botón de Atención médica especializada al cargar la página
+  document.addEventListener("DOMContentLoaded", function () {
+    var botonVisitas = document.querySelector(".botonVisitas");
+    if (botonVisitas) {
+      botonVisitas.classList.add("active");
+    }
+  });
+</script>

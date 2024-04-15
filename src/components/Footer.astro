@@ -5,6 +5,7 @@ import WhatsAppIcon from "./icons/WhatsAppIcon.astro";
 import LocationIcon from "./icons/LocationIcon.astro";
 import MailIcon from "./icons/MailIcon.astro";
 import PhoneIcon from "./icons/PhoneIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
 ---
 
 <section
@@ -17,7 +18,7 @@ import PhoneIcon from "./icons/PhoneIcon.astro";
           <Logo width="88px" height="101px" />
           <div class="flex flex-col gap-2">
             <h4 class="font-semibold text-[#d2d2d2]">Síguenos en</h4>
-            <div class="flex flex-row gap-2">
+            <div class="flex flex-row gap-2 justify-between">
               <a href="https://wa.me/+1234567890"><WhatsAppIcon /></a>
 
               <a
@@ -25,6 +26,12 @@ import PhoneIcon from "./icons/PhoneIcon.astro";
                 target="_blank"
               >
                 <FacebookIcon />
+              </a>
+              <a
+                href="https://www.facebook.com/hogararboldesabiduria/"
+                target="_blank"
+              >
+                <InstagramIcon />
               </a>
             </div>
           </div>
@@ -35,16 +42,21 @@ import PhoneIcon from "./icons/PhoneIcon.astro";
           <hr class="border border-[#D99D55] w-20 mt-1" />
           <div class="pt-5 flex flex-col">
             <div class="flex gap-3 justify-center items-center h-[38px]">
-              <LocationIcon />
+              <LocationIcon
+                width="23"
+                height="22"
+                color="#fff"
+                widthStroke="2"
+              />
               <span class=""
-                >Wisconsin Ave, Suite 700 Chevy Chase, Maryland 20815</span
+                >75 mts este de la Iglesia El Tremedal, San Ramón Alajuela</span
               >
             </div>
             <div class="flex gap-3 justify-center items-center h-[38px]">
               <MailIcon />
               <span class="">arboldesabiduria15@gmail.com</span>
             </div>
-            <div class="flex gap-3 justify-center items-center h-[38px]">
+            <div class="flex gap-3 justify-center items-center h-[34px]">
               <PhoneIcon />
               <span class="">+506 8488 4329</span>
             </div>

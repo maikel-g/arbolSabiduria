@@ -1,0 +1,83 @@
+<section class="py-[60px] flex justify-center">
+  <div
+    class="max-w-screen-xl border-2 border-[#697586] rounded-3xl w-full h-96 flex flex-col justify-center items-center text-center"
+  >
+    <div class="flex flex-col justify-center items-center z-10">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="92"
+        height="92"
+        fill="none"
+        viewBox="0 0 72 72"
+      >
+        <g clip-path="url(#a)">
+          <path
+            stroke="#D9A851"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4.96"
+            d="M62.625 30.23C62.625 50.938 36 68.688 36 68.688S9.375 50.938 9.375 30.23a26.625 26.625 0 1 1 53.25 0Z"
+          ></path>
+          <path
+            stroke="#D9A851"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2.958"
+            d="M36 39.105a8.875 8.875 0 1 0 0-17.75 8.875 8.875 0 0 0 0 17.75Z"
+          ></path>
+        </g>
+        <defs>
+          <clipPath id="a">
+            <path fill="#fff" d="M.5.646h71v71H.5z"></path>
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div class="mt-10 mb-10 flex flex-col gap-3">
+        <h3 class="font-montse text-3xl">¿Dónde estámos ubicados?</h3>
+        <p class="w-[90ch] text-xl text-[#747474]">
+          75 mts este de la Iglesia El Tremedal, San Ramón Alajuela
+        </p>
+      </div>
+
+      <a href="https://maps.app.goo.gl/bzkR1NMV94W9ix7p8" target="_blank">
+        <button
+          class="transition duration-100 bg-[#ac5e71] hover:bg-[#C77A8C] text-[#fff] py-3 font-semibold px-7 rounded-lg mt-4"
+          >Ver en Google Maps
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contenedor {
+    overflow: hidden;
+    position: relative;
+  }
+  .contenedor::before {
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 120%;
+    background: #492233;
+    animation: rotate 4s linear infinite;
+  }
+
+  .contenedor::after {
+    position: absolute;
+    content: "";
+    inset: 1px;
+    background: #fff;
+    border-radius: 20px;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

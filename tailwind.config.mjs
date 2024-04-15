@@ -7,6 +7,12 @@ export default {
         "3xl": "1920px",
       },
     },
+    fontFamily: {
+      montse: ["Montserrat", "sans-serif "],
+      workSans: ["Work Sans Variable", "sans-serif "],
+      playfair: ["Playfair Display Variable", "sans-serif "],
+      open: ["open-sans", "sans-serif "],
+    },
   },
   plugins: [require("flowbite/plugin")],
 };
