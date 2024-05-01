@@ -1,0 +1,78 @@
+---
+import HandsCrossIcon from "./icons/HandsCrossIcon.astro";
+import LogoClaro from "./icons/LogoClaro.astro";
+import LogoClaroCircular from "./icons/LogoClaroCircular.astro";
+import LogoOscuro from "./icons/LogoOscuro.astro";
+import LogoOscuroCircular from "./icons/LogoOscuroCircular.astro";
+
+interface Props {
+  fontColor: string;
+  BgColor: string;
+}
+
+const { fontColor, BgColor } = Astro.props;
+---
+
+<style>
+  a {
+    font-family: "Work Sans Variable", sans-serif;
+    font-weight: 600;
+  }
+</style>
+
+<header id="headerTransparent" class="fixed w-full z-20 bg-transparent">
+  <div class="max-w-screen-xl mx-auto">
+    <nav
+      class=`flex gap-20 justify-between items-center py-5 text-[${fontColor}] text-lg`
+    >
+      <a href="/">Inicio</a>
+      <a href="/MedicalAttention">Atención médica</a>
+      <a href="/Activities">Actividades</a>
+
+      <LogoClaro width="78px" height="90px" id="logoClaroHeader" />
+
+      <a href="/Services">Servicios</a>
+      <a href="/AboutUs">Quiénes somos</a>
+      <a href="/Contact">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<header
+  id="headerColor"
+  class="fixed w-full bg-gray-900 z-20 shadow-md shadow-yellow-300"
+  style="transform: translateY(-400%); transition: transform .4s ease-in-out"
+>
+  <div class="max-w-screen-xl mx-auto">
+    <nav
+      class="flex gap-20 justify-between items-center py-5 text-[#eef2f6] text-lg"
+    >
+      <a href="/">Inicio</a>
+      <a href="/MedicalAttention">Atención médica</a>
+      <a href="/Activities">Actividades</a>
+
+      <LogoClaroCircular width="70px" height="70px" />
+
+      <a href="/Services">Servicios</a>
+      <a href="/AboutUs">Quiénes somos</a>
+      <a href="/Contact">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    var headerColor = document.getElementById("headerColor");
+    var headerTransparent = document.getElementById("headerTransparent");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 240) {
+        headerColor.style.transform = "translateY(0)";
+        headerTransparent.classList.add("hidden");
+      } else {
+        headerColor.style.transform = "translateY(-400%)";
+        headerTransparent.classList.remove("hidden");
+      }
+    });
+  });
+</script>

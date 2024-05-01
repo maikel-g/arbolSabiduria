@@ -3,9 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import SeccionIntro from "../components/Index/SeccionIntro.astro";
 import ActivitiesWave from "../components/Activities/ActivitiesWave.astro";
 import ActivitiesTab from "../components/Activities/ActivitiesTab.astro";
+import HeaderOscuro from "../components/HeaderOscuro.astro";
 ---
 
-<Layout title="Talleres y Actividades" HeaderFontColor="text-[#EEEEEE]">
+<Layout title="Talleres y Actividades">
+  <HeaderOscuro fontColor=`#eee` BgColor="transparent" />
   <ActivitiesWave />
   <SeccionIntro
     titulo="Descubre Nuestros Talleres y Actividades"

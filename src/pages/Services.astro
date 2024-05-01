@@ -5,9 +5,11 @@ import SeccionIntro from "../components/Index/SeccionIntro.astro";
 import SpecialServices from "../components/Services/SpecialServices.astro";
 import SupportingServices from "../components/Services/SupportingServices.astro";
 import DailyServices from "../components/Services/DailyServices.astro";
+import HeaderOscuro from "../components/HeaderOscuro.astro";
 ---
 
-<Layout title="Árbol de Sabiduría" HeaderFontColor="text-[#364152]">
+<Layout title="Árbol de Sabiduría">
+  <HeaderOscuro fontColor=`#364152` BgColor="transparent" />
   <ServicesWave />
   <SeccionIntro
     titulo="Cuidados Personalizados y Atención Integral"

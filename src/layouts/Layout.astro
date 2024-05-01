@@ -8,15 +8,14 @@ import "@fontsource-variable/playfair-display";
 // Supports weights 300-800
 import "@fontsource-variable/open-sans";
 
-import Header from "../components/Header.astro";
+import Header from "../components/HeaderClaro.astro";
 import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
-  HeaderFontColor: string;
 }
 
-const { title, HeaderFontColor } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,7 +29,7 @@ const { title, HeaderFontColor } = Astro.props;
     <link rel="icon" type="image/png" href="/logo.png" />
   </head>
   <body style="">
-    <Header fontColor=`${HeaderFontColor}` BgColor="transparent" />
+    <!--    <Header fontColor=`${HeaderFontColor}` BgColor="transparent" /> -->
     <slot />
     <Footer />
   </body>
@@ -42,3 +41,25 @@ const { title, HeaderFontColor } = Astro.props;
     font-family: system-ui, sans-serif;
   }
 </style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Verifica si la resolución de la pantalla es de escritorio
+    var isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+    // Si es de escritorio, aplica el código para el nav
+    if (isDesktop) {
+      var scrollNav = document.getElementById("scrollNav");
+
+      window.addEventListener("scroll", function () {
+        // Verifica si el scroll es mayor a 200px (ajusta según tus necesidades)
+        if (window.scrollY > 200) {
+          scrollNav.style.transform = "translateY(0)";
+        } else {
+          scrollNav.style.transform = "translateY(-400%)";
+          scrollNav.classList.add = "hidden";
+        }
+      });
+    }
+  });
+</script>

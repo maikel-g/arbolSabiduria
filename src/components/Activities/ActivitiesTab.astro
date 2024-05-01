@@ -1,71 +1,74 @@
 <section class="mb-20">
   <div class="flex flex-col justify-center items-center">
     <div
-      class="mb-10 flex flex-col items-center gap-3 w-full bg-slate-500 py-10"
+      class="mb-10 flex flex-col items-center gap-3 w-full bg-gray-200 py-10"
     >
-      <h2 class="text-3xl font-medium text-[#EEE]">Actividades</h2>
+      <h2 class="text-3xl font-medium text-slate-800">Actividades</h2>
       <hr class="border border-[#D99D55] w-24 mx-auto" />
     </div>
-    <div class="max-w-4xl">
+    <div class="max-w-3xl">
       <div class="md:flex">
         <ul
-          class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 md:me-4 mb-4 md:mb-0"
+          class="flex-column space-y space-y-4 text-sm font-medium text-gray-700 md:me-4 mb-4 md:mb-0"
         >
           <li>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-4 text-[#E6B55D] bg-[#FAF0DF] rounded-lg active w-full"
-              aria-current="page"
+            <button
+              onclick="mostrarInfo(this)"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              >Recreativas</button
             >
-              Recreativas
-            </a>
           </li>
           <li>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-4 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+            <button
+              onclick="mostrarInfo(this)"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              >Artísticas</button
             >
-              Artísticas
-            </a>
           </li>
           <li>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-4 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+            <button
+              onclick="mostrarInfo(this)"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              >Manuales</button
             >
-              Manuales
-            </a>
           </li>
           <li>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-4 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+            <button
+              onclick="mostrarInfo(this)"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              >Celebraciones Especiales</button
             >
-              Celebraciones Especiales
-            </a>
           </li>
           <li>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-4 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+            <button
+              onclick="mostrarInfo(this)"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              >Otros</button
             >
-              Otros
-            </a>
           </li>
         </ul>
-        <div class="p-6 bg-gray-50 text-medium text-gray-500 rounded-lg w-full">
-          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
-            Profile Tab
-          </h3>
-          <p class="mb-2">
-            This is some placeholder content the Profile tab's associated
-            content, clicking another tab will toggle the visibility of this one
-            for the next.
-          </p>
-          <p>
-            The tab JavaScript swaps classes to control the content visibility
-            and styling.
-          </p>
+        <div
+          class="px-6 text-medium rounded-lg w-full min-h-[286px] min-w-[710px]"
+        >
+          <div class="actividadesDiv">
+            <div class="h-[165px]">
+              <h2 class="text-2xl font-playfair w-[40ch]">
+                Momentos de Diversión y Entretenimiento para tu Ser Querido
+              </h2>
+              <br />
+              <p class="text-base font-montse text-gray-500">
+                En nuestro hogar, las actividades recreativas son una parte
+                fundamental de la rutina diaria. Desde tardes de cine con
+                clásicos favoritos hasta relajantes sesiones de música.
+                Ofrecemos una variedad de opciones para que nuestros residentes
+                disfruten y se diviertan.
+                <br />
+                <br />
+                Cada actividad está diseñada para estimular la mente y el espíritu,
+                proporcionando momentos de alegría y entretenimiento para todos.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -79,4 +82,96 @@
     text-align: center;
     font-weight: 600;
   }
+
+  .active {
+    color: #e6b55d;
+    background-color: #faf0df;
+  }
+
+  button {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 </style>
+
+<script is:inline>
+  // Función para mostrar información y aplicar estilos al tab seleccionado
+  function mostrarInfo(tab) {
+    // Remover estilos activos de todos los tabs
+    var tabs = document.querySelectorAll("ul > li > button");
+    tabs.forEach(function (t) {
+      t.classList.remove("active");
+    });
+
+    console.log(tab.textContent);
+
+    // Aplicar estilos activos solo al tab seleccionado
+    tab.classList.add("active");
+
+    // Define el contenido a mostrar para cada tab
+    var contenido = "";
+    switch (tab.textContent) {
+      case "Recreativas":
+        contenido =
+          '<div class="h-[165px]">' +
+          '<h2 class="text-2xl font-playfair w-[40ch]">Momentos de Diversión y Entretenimiento para tu Ser Querido</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse text-gray-500">' +
+          "En nuestro hogar, las actividades recreativas son una parte fundamental de la rutina diaria. Desde tardes de cine con clásicos favoritos hasta relajantes sesiones de música. Ofrecemos una variedad de opciones para que nuestros residentes disfruten y se diviertan. <br /> <br /> Cada actividad está diseñada para estimular la mente y el espíritu, proporcionando momentos de alegría y entretenimiento para todos.";
+        "</p>" + "</div>";
+        break;
+      case "Artísticas":
+        contenido =
+          '<div class="h-[165px]">' +
+          '<h2 class="text-2xl font-playfair w-[40ch]">Expresión Creativa y Emocionante</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse text-gray-500">' +
+          "Fomentamos la expresión creativa y artística entre nuestros residentes mediante una variedad de actividades. Desde pintura y manualidades hasta costura y tejido. Cada taller ofrece la oportunidad de explorar nuevas habilidades y expresarse de manera única. <br /> <br /> Nuestro objetivo es inspirar la creatividad y el disfrute en un ambiente acogedor y de apoyo.";
+        "</p>" + "</div>";
+        break;
+      case "Manuales":
+        contenido =
+          '<div class="h-[165px]">' +
+          '<h2 class="text-2xl font-playfair w-[40ch]">Crea y Disfruta con tus Propias Manos</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse text-gray-500">' +
+          "Las manualidades son una forma maravillosa de expresar la creatividad y explorar nuevas habilidades. En nuestro hogar, ofrecemos una amplia gama de actividades manuales, desde pintura y recortes hasta proyectos de arte en papel y arcilla. <br /> <br /> Cada taller está diseñado para fomentar la imaginación y el trabajo en equipo, proporcionando momentos gratificantes y terapéuticos para nuestros residentes.";
+        "</p>" + "</div>";
+        break;
+      case "Celebraciones Especiales":
+        contenido =
+          '<div class="h-[165px]">' +
+          '<h2 class="text-2xl font-playfair w-[40ch]">Celebremos Juntos los Momentos Memorables</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse text-gray-500">' +
+          "En el Hogar Árbol de Sabiduría, valoramos y celebramos los momentos especiales de la vida. Desde los días festivos tradicionales como Navidad y Año Nuevo hasta los cumpleaños individuales de nuestros residentes. Cada celebración es una oportunidad para compartir alegría y camaradería. <br /> <br /> Nos esforzamos por crear experiencias memorables y significativas que fortalezcan los lazos comunitarios y fomenten el espíritu festivo.";
+        "</p>" + "</div>";
+        break;
+      case "Otros":
+        contenido =
+          '<div class="h-[165px]">' +
+          '<h2 class="text-2xl font-playfair w-[40ch]">Explora una variedad de opciones.</h2>' +
+          "<br />" +
+          '<p class="text-base font-montse text-gray-500">' +
+          "Además de nuestras actividades recreativas, artísticas y de manualidades, también ofrecemos una variedad de otras opciones para que nuestros residentes disfruten y se mantengan comprometidos. Estas actividades pueden incluir paseos al aire libre, juegos de mesa, charlas educativas y mucho más. Nuestro objetivo es proporcionar una experiencia integral que satisfaga las necesidades e intereses de cada individuo.";
+        "</p>" + "</div>";
+        break;
+    }
+
+    var contenidoDiv = document.querySelector(".actividadesDiv");
+    if (contenidoDiv) {
+      contenidoDiv.innerHTML = contenido;
+    }
+  }
+
+  // Aplicar estilos activos al primer tab al cargar la página
+  document.addEventListener("DOMContentLoaded", function () {
+    var primerTab = document.querySelector("ul > li:first-child > button");
+    if (primerTab) {
+      primerTab.classList.add("active");
+    }
+  });
+</script>

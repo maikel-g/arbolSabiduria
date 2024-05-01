@@ -1,0 +1,101 @@
+---
+import FormMailIcon from "../icons/FormMailIcon.astro";
+import UserIcon from "../icons/UserIcon.astro";
+---
+
+<section class="py-[60px]">
+  <div class="max-w-xl mx-auto">
+    <div class="">
+      <h3 class="font-workSans font-bold text-2xl">Datos de contacto</h3>
+      <br />
+      <span class="text-lg text-[#6F6C90]"
+        >Por favor, completa tus datos para poder ponernos en contacto contigo</span
+      >
+      <hr class="border border-[#D9DBE9] w-full my-10" />
+    </div>
+    <form class="flex flex-col gap-4">
+      <!-- Correo -->
+      <div>
+        <label
+          for="email-address-icon"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Correo</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+          >
+          </div>
+          <input
+            type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="ejemplo@gmail.com"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Nombre -->
+      <div>
+        <label
+          for="email-address-icon"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Nombre</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+          >
+          </div>
+          <input
+            type="text"
+            id="email-address-icon"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            required
+            placeholder="Tu nombre"
+          />
+        </div>
+      </div>
+
+      <!-- Select -->
+      <div>
+        <label
+          for="countries"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Select your country</label
+        >
+        <select
+          id="countries"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          required
+        >
+          <option>Planes de cuido</option>
+          <option>Servicios</option>
+          <option>Precios</option>
+          <option>Tipos de patologías</option>
+        </select>
+      </div>
+
+      <!-- Area -->
+      <div>
+        <label
+          for="message"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Mensaje</label
+        >
+        <textarea
+          id="message"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Deja tu mensaje..."
+          required
+          style="resize: none;"></textarea>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-2"
+        >Enviar</button
+      >
+    </form>
+  </div>
+</section>
