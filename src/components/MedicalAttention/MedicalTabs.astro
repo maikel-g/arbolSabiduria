@@ -1,69 +1,71 @@
-<section class="mb-20">
+<section class="mb-10 lg:mb-20">
   <div class="flex flex-col justify-center items-center">
     <div
-      class="mb-10 flex flex-col items-center gap-3 w-full bg-gray-200 py-10"
+      class="mb-10 flex flex-col items-center gap-3 w-full bg-gray-200 py-5 md:py-10"
     >
-      <h2 class="text-3xl font-medium text-slate-800">Tipos de cuido</h2>
+      <h2 class="text-xl lg:text-3xl font-medium text-slate-800">
+        Tipos de cuido
+      </h2>
       <hr class="border border-[#D99D55] w-24 mx-auto" />
     </div>
-    <div class="max-w-3xl">
+    <div class="contenedorTabs md:max-w-3xl">
       <div class="md:flex">
         <ul
-          class="flex-column space-y space-y-4 text-sm font-medium text-gray-700 md:me-4 mb-4 md:mb-0"
+          class="flex-column space-y space-y-4 text-sm font-medium text-gray-700 md:me-4 mb-10 lg:mb-4 md:mb-0 px-8 md:px-0 md:pl-8 lg:px-0"
         >
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Permanente</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Diurno</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Postoperatorio</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Vacacional</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Ocasional</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Temporal</button
             >
           </li>
         </ul>
         <div
-          class="px-6 text-medium rounded-lg w-full min-h-[286px] min-w-[710px]"
+          class="px-8 lg:px-6 rounded-lg w-full h-auto lg:h-[286px] lg:w-[710px]"
         >
           <div class="actividadesDiv">
-            <div class="h-[165px]">
-              <h2 class="text-2xl font-playfair w-[40ch]">
+            <div class="lg:h-[165px]">
+              <h2 class="text-2xl font-playfair lg:w-[40ch]">
                 Un apoyo constante para una vida plena
               </h2>
               <br />
-              <p class="text-base font-montse text-gray-500">
+              <p class="text-sm lg:text-base font-montse text-gray-500">
                 En nuestro hogar, comprendemos que algunas personas necesitan
                 atención constante y especializada debido a condiciones médicas
                 complejas o a su estado de salud en general. Por eso, ofrecemos
@@ -94,24 +96,20 @@
 </section>
 
 <style>
-  li > a {
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    font-weight: 600;
-  }
-
   .active {
     color: #e6b55d;
     background-color: #faf0df;
   }
 
   button {
-    font-size: 18px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+  }
+
+  .contenedorTabs {
+    max-width: 100%;
   }
 </style>
 
@@ -134,55 +132,55 @@
     switch (tab.textContent) {
       case "Permanente":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Un apoyo constante para una vida plena</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Un apoyo constante para una vida plena</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "En nuestro hogar, comprendemos que algunas personas necesitan atención constante y especializada debido a condiciones médicas complejas o a su estado de salud en general. Por eso, ofrecemos un plan de cuidado permanente que garantiza una supervisión y asistencia continua durante las 24 horas del día. <br /> <br /> Nuestro equipo de profesionales altamente calificados está dedicado a proporcionar un ambiente seguro y acogedor donde los residentes puedan recibir el apoyo que necesitan para llevar una vida plena y digna. Desde la administración de medicamentos hasta la asistencia en actividades diarias. Nos comprometemos a brindar cuidados personalizados que se adapten a las necesidades únicas de cada individuo. <br /> <br /> Además del cuidado físico, también nos preocupamos por el bienestar emocional y social de nuestros residentes. Organizamos actividades recreativas y sociales que fomentan la interacción y el compromiso, promoviendo así una sensación de comunidad y pertenencia entre nuestros residentes.";
         "</p>" + "</div>";
         break;
       case "Diurno":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Independencia con atención diaria</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Independencia con atención diaria</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Para aquellos que valoran su independencia pero aún necesitan un poco de apoyo durante el día, ofrecemos un plan diurno de lunes a viernes. Con horarios flexibles que van desde las 7 am hasta las 3 pm u 8 am hasta las 4 pm. Este plan proporciona una variedad de actividades estimulantes y socialmente enriquecedoras. <br /> <br /> Nuestro objetivo es crear un ambiente donde los residentes puedan mantenerse activos y participar en actividades significativas mientras disfrutan de la compañía de otros. Desde clases de ejercicio hasta juegos de mesa y arte terapia, nuestras actividades están diseñadas para promover la salud física, cognitiva y emocional de nuestros residentes. <br /> <br /> Además de las actividades programadas, también ofrecemos servicios de comidas nutritivas y deliciosas, garantizando que cada residente reciba la nutrición adecuada durante su estadía con nosotros.";
         "</p>" + "</div>";
         break;
       case "Postoperatorio":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Recuperación segura y especializada</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Recuperación segura y especializada</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Tras someterse a una cirugía, es esencial contar con cuidados especializados durante el período de recuperación. Nuestro plan de cuidado postoperatorio está diseñado para proporcionar la atención necesaria para una recuperación óptima y segura. <br /> <br /> Desde el control de medicamentos hasta la terapia física, nuestro equipo médico y de enfermería está capacitado para brindar cuidados especializados y monitoreo continuo para garantizar una recuperación exitosa. <br /> <br /> Nos aseguramos de que cada residente reciba una atención personalizada de acuerdo a sus necesidades específicas postoperatorias, trabajando en estrecha colaboración con sus médicos y terapeutas para alcanzar los mejores resultados posibles.";
         "</p>" + "</div>";
         break;
       case "Vacacional":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Tranquilidad durante su ausencia</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Tranquilidad durante su ausencia</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Sabemos lo importante que es para las familias tener la tranquilidad de que sus seres queridos están bien cuidados, incluso cuando están fuera de la ciudad o de vacaciones. Por eso, ofrecemos un plan de cuidado vacacional que cubre las necesidades de los adultos mayores durante ese período. <br /> <br /> Ya sea que necesiten atención temporal debido a la ausencia de sus familiares o simplemente deseen disfrutar de unas vacaciones tranquilas y relajantes, nuestro equipo está aquí para proporcionar el apoyo necesario.  <br /> <br /> Desde la asistencia con actividades diarias hasta la supervisión médica. Nos aseguramos de que cada residente se sienta seguro y atendido durante su estancia con nosotros.";
         "</p>" + "</div>";
         break;
       case "Ocasional":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Asistencia adaptada a sus necesidades</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Asistencia adaptada a sus necesidades</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Entendemos que las necesidades de cuidado pueden variar según las circunstancias y los horarios de cada familia. Por eso, ofrecemos un plan de cuidado ocasional que se adapta a horarios y días específicos según las necesidades del residente y su familia. <br /> <br /> Ya sea que necesiten cuidados esporádicos debido a compromisos laborales o eventos sociales, nuestro equipo está disponible para brindar el apoyo necesario en cualquier momento. Nos esforzamos por crear un ambiente flexible y acogedor donde los residentes puedan recibir la atención que necesitan cuando la necesitan, sin comprometer su independencia y libertad. ";
         "</p>" + "</div>";
         break;
       case "Temporal":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Atención continua cuando más se necesita</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Atención continua cuando más se necesita</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Para situaciones donde se necesite cuidado por un período definido y extendido, ofrecemos un plan de cuidado temporal que brinda atención continua y especializada durante el tiempo requerido. Ya sea que necesiten recuperarse de una enfermedad o cirugía, o simplemente necesiten un lugar seguro y acogedor mientras sus cuidadores habituales (familiares u otros) no están disponibles. <br /> <br /> Nuestro equipo está aquí para brindar el apoyo necesario, asegurándonos  de que cada residente reciba una atención personalizada y de alta calidad durante su estancia con nosotros, garantizando su comodidad y bienestar en todo momento.";
         "</p>" + "</div>";
         break;

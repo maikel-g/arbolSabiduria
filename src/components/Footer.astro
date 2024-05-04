@@ -9,15 +9,17 @@ import InstagramIcon from "./icons/InstagramIcon.astro";
 ---
 
 <section
-  class="bg-black pt-[60px] pb-12 flex flex-col justify-center items-center text-white"
+  class="px-8 md:px-16 bg-black pt-[60px] pb-12 flex flex-col justify-center items-center text-[#eee] xl:px-0"
 >
   <div class="md:max-w-screen-xl w-full">
     <div class="flex flex-col gap-12">
-      <div class="flex justify-between items-start">
+      <div class="flex justify-between items-start flex-col md:flex-row">
         <div class="flex flex-col gap-6">
           <LogoClaro width="88px" height="101px" id="logoClaroFooter" />
           <div class="flex flex-col gap-2">
-            <h4 class="font-semibold text-[#d2d2d2]">Síguenos en</h4>
+            <h4 class="text-sm font-semibold text-[#d2d2d2] md:text-base">
+              Síguenos en
+            </h4>
             <div class="flex flex-row gap-2 justify-between">
               <a href="https://wa.me/+50684884329" target="_blank"
                 ><WhatsAppIcon /></a
@@ -39,10 +41,10 @@ import InstagramIcon from "./icons/InstagramIcon.astro";
           </div>
         </div>
 
-        <div>
-          <h4 class="font-semibold text-white text-lg">Contáctenos</h4>
-          <hr class="border border-[#D99D55] w-20 mt-1" />
-          <div class="pt-5 flex flex-col">
+        <div class="mt-10 md:mt-0">
+          <h4 class="font-semibold text-[#eee] text-lg">Contáctenos</h4>
+          <hr class="border border-[#D99D55] w-20 mt-1 mb-1" />
+          <div class="pt-5 flex flex-col gap-1">
             <div class="flex gap-3 justify-center items-center h-[38px]">
               <LocationIcon
                 width="23"

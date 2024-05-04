@@ -2,9 +2,10 @@
 interface Props {
   width: string;
   height: string;
+  id: string;
 }
 
-const { width, height } = Astro.props;
+const { width, height, id } = Astro.props;
 ---
 
 <svg
@@ -15,10 +16,10 @@ const { width, height } = Astro.props;
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
-  <rect width="507" height="507" fill="url(#pattern0_592_6993)"></rect>
+  <rect width="507" height="507" fill={`url(#${id})`}></rect>
   <defs>
     <pattern
-      id="pattern0_592_6993"
+      id={`${id}`}
       patternContentUnits="objectBoundingBox"
       width="1"
       height="1"

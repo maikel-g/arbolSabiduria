@@ -11,13 +11,19 @@ const { titulo, parrafoGrande, parrafoPequeño } = Astro.props;
 <section class="py-[60px] flex justify-center items-center text-center">
   <div class="flex justify-center items-center flex-col gap-7 w-full">
     <div class="flex justify-center items-center flex-col gap-4">
-      <h5 class="text-base text-[#333333]">{titulo}</h5>
+      <h5 class="text-xs md:text-sm lg:text-base text-[#333333]">{titulo}</h5>
       <hr class="border border-[#D99D55] w-24" />
     </div>
-    <p class="text-[32px] parrafoGrande text-[#333333]ㅋ">
+    <p
+      class="mini:text-base sm:text-lg md:text-2xl lg:text-3xl parrafoGrande text-[#333333]"
+    >
       {parrafoGrande}
     </p>
-    <p class="w-[90ch] text-sm text-[#747474]">{parrafoPequeño}</p>
+    <p
+      class="mini:w-[55ch] sm:w-[60ch] md:w-[80ch] lg:w-[90ch] text-xs lg:text-sm text-[#747474]"
+    >
+      {parrafoPequeño}
+    </p>
   </div>
 </section>
 

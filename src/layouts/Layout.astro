@@ -27,9 +27,15 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="icon" type="image/png" href="/logo.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </head>
-  <body style="">
-    <!--    <Header fontColor=`${HeaderFontColor}` BgColor="transparent" /> -->
+  <body class="">
     <slot />
     <Footer />
   </body>
