@@ -2,34 +2,37 @@
 import WhatsAppIcon from "../icons/WhatsAppIcon.astro";
 import UserIcon from "../icons/UserIcon.astro";
 import FormMailIcon from "../icons/FormMailIcon.astro";
+import LogoOscuro from "../icons/LogoOscuro.astro";
 ---
 
-<hr class="border-2 border-[#D9A851] w-full mt-5" />
-<section class="flex flex-row justify-center items-center py-[60px]">
-  <div class="w-full max-w-screen-xl flex flex-row items-center">
-    <div class="flex flex-col">
-      <h3 class="text-3xl font-playfair pb-8 w-[30ch]">
+<hr class="border-2 border-[#D9A851] w-full lg:mt-5" />
+<section
+  class="flex flex-row justify-center items-center pt-[60px] mx-8 md:mx-16"
+>
+  <div class="w-full max-w-screen-xl flex flex-col lg:flex-row items-center">
+    <div class="flex flex-col lg:w-3/5 xl:w-full lg:mr-4 xl:mr-0">
+      <h3 class="text-3xl font-playfair pb-8 lg:w-[30ch]">
         Contáctanos para una Evaluación Personalizada
       </h3>
-      <p class="font-montse text-base w-[60ch]">
+      <p class="font-montse text-sm lg:text-sm xl:text-base xl:w-[60ch]">
         Estamos aquí para ayudarte en cada paso del camino. Envíanos un mensaje
         con tus comentarios y preguntas en el siguiente formulario. Te estaremos
         contactando de vuelta para aclarar todas tus dudas y proporcionarte la
         mejor atención posible.
         <br />
       </p>
-      <p class="font-montse text-base mt-4 w-[60ch]">
+      <p class="font-montse text-sm lg:text-sm xl:text-base mt-4 xl:w-[60ch]">
         Además, ¡puedes chatear directamente con nosotros a través de nuestro
         canal de WhatsApp!
       </p>
 
       <a
-        class="text-left w-fit"
+        class="text-left w-full lg:w-fit"
         href="https://wa.me/+50684884329"
         target="_blank"
       >
         <button
-          class={`bg-[#128C7E] text-[#fff]  w-60 h-14  rounded-lg mt-4 flex font-montse text-base justify-center items-center gap-2`}
+          class={`bg-[#128C7E] text-[#fff] w-30 h-14 p-3 w-full  lg:w-60 lg:h-14  rounded-lg mt-8 lg:mt-4 flex font-montse text-sm lg:text-base justify-center items-center gap-2`}
         >
           Chatea por WhatsApp
           <WhatsAppIcon />
@@ -37,14 +40,23 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
       </a>
     </div>
 
-    <div class="w-full flex justify-end">
-      <div class="flex flex-col bg-slate-200 w-[440px] px-8 py-12 rounded-2xl">
-        <form class="max-w-sm flex flex-col gap-4">
+    <div
+      class="w-full flex flex-col lg:flex-row justify-end items-center mt-16 lg:mt-0"
+    >
+      <h3 class="text-2xl font-playfair pb-2 md:hidden">
+        Formulario de contacto
+      </h3>
+      <hr class="border border-[#D9A851] w-24 mb-8 md:hidden" />
+      <div
+        class="flex flex-col bg-slate-200 w-full xl:w-[440px] px-8 py-12 lg:py-8 xl:py-12 rounded-2xl"
+      >
+        <form id="contact-form" class="lg:max-w-sm flex flex-col gap-4 w-full">
           <!-- Correo -->
           <div>
             <label
               for="email-address-icon"
-              class="block mb-2 text-sm font-medium text-gray-900">Correo</label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Correo</label
             >
             <div class="relative">
               <div
@@ -53,9 +65,12 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
                 <FormMailIcon />
               </div>
               <input
-                type="text"
-                class="min-w-80 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                type="email"
+                name="email"
                 placeholder="ejemplo@gmail.com"
+                title="Email incorrecto"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
                 required
               />
             </div>
@@ -75,11 +90,13 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
                 <UserIcon />
               </div>
               <input
-                type="text"
-                id="email-address-icon"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
-                required
+                type="text"
+                name="name"
                 placeholder="Tu nombre"
+                title="Nombre sólo acepta letras y espacios en blanco"
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                required
               />
             </div>
           </div>
@@ -89,10 +106,10 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
             <label
               for="countries"
               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >Select your country</label
+              >Tipo de consulta</label
             >
             <select
-              id="countries"
+              name="tipoConsulta"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               required
             >
@@ -103,7 +120,7 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
             </select>
           </div>
 
-          <!-- Area -->
+          <!-- mensaje -->
           <div>
             <label
               for="message"
@@ -112,27 +129,102 @@ import FormMailIcon from "../icons/FormMailIcon.astro";
             >
             <textarea
               id="message"
+              name="message"
               rows="4"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Deja tu mensaje..."
               required
               style="resize: none;"></textarea>
           </div>
+
+          <div class="contact-form-loader none">
+            <img src="./loader.svg" alt="Enviando..." class="loader mx-auto" />
+          </div>
+
           <button
             type="submit"
             class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mt-2 text-center"
             >Submit</button
           >
         </form>
+
+        <article id="gracias" class="ventana-modal">
+          <div class="modal-contenido">
+            <article
+              class="contact-form-response flex flex-col justify-center items-center p-16 mini:w-80 mini:max-h-96 lg:w-96"
+            >
+              <h3 class="text-2xl text-[#5e5e70] font-semibold pb-4">
+                ¡Mensaje enviado con éxito!
+              </h3>
+              <LogoOscuro width="88px" height="101px" id="logoClaroForm" />
+              <span class="text-sm text-[#5e5e70] font-medium pt-4"
+                >¡Nos pondremos en contacto contigo pronto!</span
+              >
+            </article>
+          </div>
+        </article>
       </div>
     </div>
+
+    <style>
+      .ventana-modal#gracias:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      /* ******** Modal ******** */
+      .ventana-modal {
+        position: fixed;
+        z-index: 999 !important;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+      }
+
+      .modal-contenido {
+        position: relative;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      .modal-close svg {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .loader {
+        max-width: 2rem;
+        height: auto;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .contact-form-response {
+        /*           max-width: 900px;
+          min-height: 200px; */
+        text-align: center;
+        background-color: #e5e5f7;
+        border-radius: 1rem;
+      }
+
+      .contact-form-response svg {
+        width: 4rem;
+        height: 4rem;
+        fill: #d9a756;
+      }
+    </style>
   </div>
 </section>
-<hr class="border-2 border-[#D9A851] w-full mt-5" />
-
-<!-- <style>
-  select {
-    font-family: "Work Sans Variable", sans-serif;
-    color: #6f6c90;
-  }
-</style> -->

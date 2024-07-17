@@ -1,9 +1,11 @@
 ---
 import FormMailIcon from "../icons/FormMailIcon.astro";
+import LogoClaro from "../icons/LogoClaro.astro";
+import LogoOscuro from "../icons/LogoOscuro.astro";
 import UserIcon from "../icons/UserIcon.astro";
 ---
 
-<section class="py-[60px]">
+<section class="py-[60px] px-8 xl:px-64">
   <div class="max-w-xl mx-auto">
     <div class="">
       <h3 class="font-workSans font-bold text-2xl">Datos de contacto</h3>
@@ -13,7 +15,7 @@ import UserIcon from "../icons/UserIcon.astro";
       >
       <hr class="border border-[#D9DBE9] w-full my-10" />
     </div>
-    <form class="flex flex-col gap-4">
+    <form class="flex flex-col gap-4 md:px-16 lg:px-0" id="contact-form">
       <!-- Correo -->
       <div>
         <label
@@ -27,9 +29,12 @@ import UserIcon from "../icons/UserIcon.astro";
           >
           </div>
           <input
-            type="text"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            type="email"
+            name="email"
             placeholder="ejemplo@gmail.com"
+            title="Email incorrecto"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
             required
           />
         </div>
@@ -38,7 +43,7 @@ import UserIcon from "../icons/UserIcon.astro";
       <!-- Nombre -->
       <div>
         <label
-          for="email-address-icon"
+          for="name"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >Nombre</label
         >
@@ -48,11 +53,13 @@ import UserIcon from "../icons/UserIcon.astro";
           >
           </div>
           <input
-            type="text"
-            id="email-address-icon"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            required
+            type="text"
+            name="name"
             placeholder="Tu nombre"
+            title="Nombre sólo acepta letras y espacios en blanco"
+            pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            required
           />
         </div>
       </div>
@@ -60,23 +67,23 @@ import UserIcon from "../icons/UserIcon.astro";
       <!-- Select -->
       <div>
         <label
-          for="countries"
+          for="planes"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Select your country</label
+          >Tipo de consulta</label
         >
         <select
-          id="countries"
+          name="tipoConsulta"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           required
         >
-          <option>Planes de cuido</option>
-          <option>Servicios</option>
-          <option>Precios</option>
-          <option>Tipos de patologías</option>
+          <option value="Planes de cuido">Planes de cuido</option>
+          <option value="Servicios">Servicios</option>
+          <option value="Precios">Precios</option>
+          <option value="Tipos de patologías">Tipos de patologías</option>
         </select>
       </div>
 
-      <!-- Area -->
+      <!-- mensaje -->
       <div>
         <label
           for="message"
@@ -85,17 +92,100 @@ import UserIcon from "../icons/UserIcon.astro";
         >
         <textarea
           id="message"
+          name="message"
           rows="4"
           class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Deja tu mensaje..."
           required
           style="resize: none;"></textarea>
       </div>
+
+      <div class="contact-form-loader none">
+        <img src="./loader.svg" alt="Enviando..." class="loader mx-auto" />
+      </div>
+
       <button
         type="submit"
         class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mt-2"
         >Enviar</button
       >
     </form>
+
+    <article id="gracias" class="ventana-modal">
+      <div class="modal-contenido">
+        <article
+          class="contact-form-response flex flex-col justify-center items-center p-16 mini:w-80 mini:max-h-96 lg:w-96"
+        >
+          <h3 class="text-2xl text-[#5e5e70] font-semibold pb-4">
+            ¡Mensaje enviado con éxito!
+          </h3>
+          <LogoOscuro width="88px" height="101px" id="logoClaroForm" />
+          <span class="text-sm text-[#5e5e70] font-medium pt-4"
+            >¡Nos pondremos en contacto contigo pronto!</span
+          >
+        </article>
+      </div>
+
+      <style>
+        .ventana-modal#gracias:target {
+          opacity: 1;
+          pointer-events: auto;
+        }
+        /* ******** Modal ******** */
+        .ventana-modal {
+          position: fixed;
+          z-index: 999 !important;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          pointer-events: none;
+          transition: all 1s;
+        }
+
+        .modal-contenido {
+          position: relative;
+        }
+
+        .modal-close {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+
+        .modal-close svg {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        .loader {
+          max-width: 2rem;
+          height: auto;
+        }
+
+        .none {
+          display: none;
+        }
+
+        .contact-form-response {
+          /*           max-width: 900px;
+          min-height: 200px; */
+          text-align: center;
+          background-color: #e5e5f7;
+          border-radius: 1rem;
+        }
+
+        .contact-form-response svg {
+          width: 4rem;
+          height: 4rem;
+          fill: #d9a756;
+        }
+      </style>
+    </article>
   </div>
 </section>

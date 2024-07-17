@@ -5,6 +5,7 @@ export default {
     extend: {
       screens: {
         mini: "370px",
+        mobileL: "420px",
         "3xl": "1920px",
       },
     },

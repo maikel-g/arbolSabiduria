@@ -1,62 +1,64 @@
-<section class="mb-20">
+<section class="mb-10 lg:mb-20">
   <div class="flex flex-col justify-center items-center">
     <div
-      class="mb-10 flex flex-col items-center gap-3 w-full bg-gray-200 py-10"
+      class="mb-10 flex flex-col items-center gap-3 w-full bg-gray-200 py-5 md:py-10"
     >
-      <h2 class="text-3xl font-medium text-slate-800">Actividades</h2>
+      <h2 class="text-xl lg:text-3xl font-medium text-slate-800">
+        Actividades
+      </h2>
       <hr class="border border-[#D99D55] w-24 mx-auto" />
     </div>
-    <div class="max-w-3xl">
+    <div class="contenedorTabs md:max-w-3xl">
       <div class="md:flex">
         <ul
-          class="flex-column space-y space-y-4 text-sm font-medium text-gray-700 md:me-4 mb-4 md:mb-0"
+          class="flex-column space-y space-y-4 text-sm font-medium text-gray-700 md:me-4 mb-10 lg:mb-4 md:mb-0 px-8 md:px-0 md:pl-8 2xl:px-0 w-full md:w-[23ch]"
         >
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Recreativas</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Artísticas</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Manuales</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Celebraciones Especiales</button
             >
           </li>
           <li>
             <button
               onclick="mostrarInfo(this)"
-              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full"
+              class="inline-flex items-center justify-center px-5 py-5 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full text-base lg:text-lg"
               >Otros</button
             >
           </li>
         </ul>
         <div
-          class="px-6 text-medium rounded-lg w-full min-h-[286px] min-w-[710px]"
+          class="px-8 lg:px-6 rounded-lg w-full h-auto lg:h-[286px] lg:w-[710px]"
         >
           <div class="actividadesDiv">
-            <div class="h-[165px]">
-              <h2 class="text-2xl font-playfair w-[40ch]">
+            <div class="lg:h-[165px]">
+              <h2 class="text-2xl font-playfair lg:w-[40ch]">
                 Momentos de Diversión y Entretenimiento para tu Ser Querido
               </h2>
               <br />
-              <p class="text-base font-montse text-gray-500">
+              <p class="text-sm lg:text-base font-montse text-gray-500">
                 En nuestro hogar, las actividades recreativas son una parte
                 fundamental de la rutina diaria. Desde tardes de cine con
                 clásicos favoritos hasta relajantes sesiones de música.
@@ -76,24 +78,20 @@
 </section>
 
 <style>
-  li > a {
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    font-weight: 600;
-  }
-
   .active {
     color: #e6b55d;
     background-color: #faf0df;
   }
 
   button {
-    font-size: 18px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+  }
+
+  .contenedorTabs {
+    max-width: 100%;
   }
 </style>
 
@@ -116,46 +114,46 @@
     switch (tab.textContent) {
       case "Recreativas":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Momentos de Diversión y Entretenimiento para tu Ser Querido</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Momentos de Diversión y Entretenimiento para tu Ser Querido</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "En nuestro hogar, las actividades recreativas son una parte fundamental de la rutina diaria. Desde tardes de cine con clásicos favoritos hasta relajantes sesiones de música. Ofrecemos una variedad de opciones para que nuestros residentes disfruten y se diviertan. <br /> <br /> Cada actividad está diseñada para estimular la mente y el espíritu, proporcionando momentos de alegría y entretenimiento para todos.";
         "</p>" + "</div>";
         break;
       case "Artísticas":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Expresión Creativa y Emocionante</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Expresión Creativa y Emocionante</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Fomentamos la expresión creativa y artística entre nuestros residentes mediante una variedad de actividades. Desde pintura y manualidades hasta costura y tejido. Cada taller ofrece la oportunidad de explorar nuevas habilidades y expresarse de manera única. <br /> <br /> Nuestro objetivo es inspirar la creatividad y el disfrute en un ambiente acogedor y de apoyo.";
         "</p>" + "</div>";
         break;
       case "Manuales":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Crea y Disfruta con tus Propias Manos</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Crea y Disfruta con tus Propias Manos</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Las manualidades son una forma maravillosa de expresar la creatividad y explorar nuevas habilidades. En nuestro hogar, ofrecemos una amplia gama de actividades manuales, desde pintura y recortes hasta proyectos de arte en papel y arcilla. <br /> <br /> Cada taller está diseñado para fomentar la imaginación y el trabajo en equipo, proporcionando momentos gratificantes y terapéuticos para nuestros residentes.";
         "</p>" + "</div>";
         break;
       case "Celebraciones Especiales":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Celebremos Juntos los Momentos Memorables</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Celebremos Juntos los Momentos Memorables</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "En el Hogar Árbol de Sabiduría, valoramos y celebramos los momentos especiales de la vida. Desde los días festivos tradicionales como Navidad y Año Nuevo hasta los cumpleaños individuales de nuestros residentes. Cada celebración es una oportunidad para compartir alegría y camaradería. <br /> <br /> Nos esforzamos por crear experiencias memorables y significativas que fortalezcan los lazos comunitarios y fomenten el espíritu festivo.";
         "</p>" + "</div>";
         break;
       case "Otros":
         contenido =
-          '<div class="h-[165px]">' +
-          '<h2 class="text-2xl font-playfair w-[40ch]">Explora una variedad de opciones.</h2>' +
+          '<div class="lg:h-[165px]">' +
+          '<h2 class="text-2xl font-playfair lg:w-[40ch]">Explora una variedad de opciones.</h2>' +
           "<br />" +
-          '<p class="text-base font-montse text-gray-500">' +
+          '<p class="text-sm lg:text-base font-montse text-gray-500">' +
           "Además de nuestras actividades recreativas, artísticas y de manualidades, también ofrecemos una variedad de otras opciones para que nuestros residentes disfruten y se mantengan comprometidos. Estas actividades pueden incluir paseos al aire libre, juegos de mesa, charlas educativas y mucho más. Nuestro objetivo es proporcionar una experiencia integral que satisfaga las necesidades e intereses de cada individuo.";
         "</p>" + "</div>";
         break;

@@ -2,9 +2,10 @@
 interface Props {
   width: string;
   height: string;
+  id: string;
 }
 
-const { width, height } = Astro.props;
+const { width, height, id } = Astro.props;
 ---
 
 <svg
@@ -14,10 +15,10 @@ const { width, height } = Astro.props;
   fill="none"
   viewBox="0 0 362 361"
 >
-  <path fill="url(#fd)" d="M0 0h362v361H0z"></path>
+  <path fill={`url(#${id})`} d="M0 0h362v361H0z"></path>
   <defs>
     <pattern
-      id="fd"
+      id={`${id}`}
       width="1"
       height="1"
       patternContentUnits="objectBoundingBox"

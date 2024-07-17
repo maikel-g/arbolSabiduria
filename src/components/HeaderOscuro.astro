@@ -1,16 +1,15 @@
 ---
-import HandsCrossIcon from "./icons/HandsCrossIcon.astro";
-import LogoClaro from "./icons/LogoClaro.astro";
-import LogoClaroCircular from "./icons/LogoClaroCircular.astro";
 import LogoOscuro from "./icons/LogoOscuro.astro";
+import LogoClaroCircular from "./icons/LogoClaroCircular.astro";
+import LogoClaro from "./icons/LogoClaro.astro";
 import LogoOscuroCircular from "./icons/LogoOscuroCircular.astro";
 
 interface Props {
   fontColor: string;
-  BgColor: string;
+  iconMenuColor: string;
 }
 
-const { fontColor, BgColor } = Astro.props;
+const { fontColor, iconMenuColor } = Astro.props;
 ---
 
 <style>
@@ -21,9 +20,9 @@ const { fontColor, BgColor } = Astro.props;
 </style>
 
 <header id="headerTransparent" class="fixed w-full z-20 bg-transparent">
-  <div class="max-w-screen-xl mx-auto">
+  <div class="xl:max-w-screen-xl lg:mx-auto">
     <nav
-      class=`flex gap-20 justify-between items-center py-5 text-[${fontColor}] text-lg`
+      class=`hidden lg:flex gap-0 xl:gap-20 lg:justify-between lg:items-center py-5 lg:px-14 xl:px-0 text-[${fontColor}] text-base xl:text-lg `
     >
       <a href="/">Inicio</a>
       <a href="/MedicalAttention">Atención médica</a>
@@ -35,6 +34,72 @@ const { fontColor, BgColor } = Astro.props;
       <a href="/AboutUs">Quiénes somos</a>
       <a href="/Contact">Contacto</a>
     </nav>
+
+    <nav class="flex justify-between items-center flex-col mx-auto lg:hidden">
+      <div id="menuSmInicial" class="flex justify-between w-full p-5 fixed">
+        <LogoOscuroCircular width="60px" height="60px" id="logoSmInicial" />
+        <div class="flex items-center gap-6">
+          <ion-icon
+            name="menu"
+            class=`text-3xl cursor-pointer text-${iconMenuColor}`></ion-icon>
+        </div>
+      </div>
+
+      <div
+        id="menuSmAction"
+        class="nav-links duration-500 bg-white w-full flex flex-col px-5 justify-center pt-5 menuOculto"
+      >
+        <div class="flex justify-between">
+          <LogoOscuroCircular
+            width="60px"
+            height="60px"
+            id="logoOscuroSmAction"
+          />
+          <div class="flex items-center gap-6">
+            <ion-icon name="close" class="text-3xl cursor-pointer text-gray-700"
+            ></ion-icon>
+          </div>
+        </div>
+        <div class="flex justify-center py-6">
+          <div class="flex flex-col items-center gap-3 w-full">
+            <a
+              href="/"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Inicio</a
+            >
+
+            <a
+              href="/MedicalAttention"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Atención médica</a
+            >
+
+            <a
+              href="/Activities"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Actividades</a
+            >
+
+            <a
+              href="/Services"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Servicios</a
+            >
+            <a
+              href="/AboutUs"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Quiénes somos</a
+            >
+
+            <a
+              href="/Contact"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Contacto</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
 
@@ -43,9 +108,9 @@ const { fontColor, BgColor } = Astro.props;
   class="fixed w-full bg-gray-900 z-20 shadow-md shadow-yellow-300"
   style="transform: translateY(-400%); transition: transform .4s ease-in-out"
 >
-  <div class="max-w-screen-xl mx-auto">
+  <div class="xl:max-w-screen-xl lg:mx-auto">
     <nav
-      class="flex gap-20 justify-between items-center py-5 text-[#eef2f6] text-lg"
+      class=`hidden lg:flex gap-0 xl:gap-20 lg:justify-between lg:items-center py-5 lg:px-14 xl:px-0 text-[#eef2f6] text-base xl:text-lg `
     >
       <a href="/">Inicio</a>
       <a href="/MedicalAttention">Atención médica</a>
@@ -57,8 +122,91 @@ const { fontColor, BgColor } = Astro.props;
       <a href="/AboutUs">Quiénes somos</a>
       <a href="/Contact">Contacto</a>
     </nav>
+
+    <nav class="flex justify-between items-center flex-col mx-auto lg:hidden">
+      <div id="darkMenuSmInicial" class="flex justify-between w-full p-5 fixed">
+        <LogoClaroCircular width="60px" height="60px" id="logoSmIniciadl" />
+        <div class="flex items-center gap-6">
+          <ion-icon
+            id="darkOpen"
+            name="menu"
+            class=`text-3xl cursor-pointer text-white`></ion-icon>
+        </div>
+      </div>
+
+      <div
+        id="darkMenuSmAction"
+        class="nav-links duration-500 w-full flex flex-col px-5 justify-center pt-5 menuOculto"
+      >
+        <div class="flex justify-between pb-6">
+          <LogoClaroCircular width="60px" height="60px" id="darkLogoSmAction" />
+          <div class="flex items-center gap-6">
+            <ion-icon
+              id="darkClose"
+              name="close"
+              class="text-3xl cursor-pointer text-white"></ion-icon>
+          </div>
+        </div>
+        <div id="darkContainerOpc" class="flex justify-center pb-6 hidden">
+          <div class="flex flex-col items-center gap-3 w-full">
+            <a
+              href="/"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Inicio</a
+            >
+
+            <a
+              href="/MedicalAttention"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Atención médica</a
+            >
+
+            <a
+              href="/Activities"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Actividades</a
+            >
+
+            <a
+              href="/Services"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Servicios</a
+            >
+            <a
+              href="/AboutUs"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Quiénes somos</a
+            >
+
+            <a
+              href="/Contact"
+              class="w-full bg-[#eee] hover:bg-[#1A4B6C] hover:text-[#E6B55D] text-center rounded-sm py-2"
+              >Contacto</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
+
+<style>
+  #headerTransparent,
+  #headerColor {
+    max-width: 100vw;
+  }
+
+  .menuOculto {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5 ease;
+  }
+
+  .menuVisible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", function () {
@@ -73,6 +221,50 @@ const { fontColor, BgColor } = Astro.props;
         headerColor.style.transform = "translateY(-400%)";
         headerTransparent.classList.remove("hidden");
       }
+    });
+
+    const menuButton = document.querySelector('ion-icon[name="menu"]');
+    const closeButton = document.querySelector('ion-icon[name="close"]');
+    const menuSmInicial = document.getElementById("menuSmInicial");
+    const menuSmAction = document.getElementById("menuSmAction");
+
+    const darkMenuSmInicial = document.getElementById("darkMenuSmInicial");
+    const darkMenuSmAction = document.getElementById("darkMenuSmAction");
+
+    const darkOpen = document.getElementById("darkOpen");
+    const darkClose = document.getElementById("darkClose");
+    const darkContainerOpc = document.getElementById("darkContainerOpc");
+
+    menuButton.addEventListener("click", function () {
+      menuSmInicial.classList.toggle("menuOculto");
+      menuSmAction.classList.toggle("menuVisible");
+
+      menuSmAction.classList.remove("menuOculto");
+    });
+
+    closeButton.addEventListener("click", function () {
+      menuSmInicial.classList.toggle("menuVisible");
+      menuSmAction.classList.toggle("menuOculto");
+
+      menuSmAction.classList.remove("menuVisible");
+    });
+
+    darkOpen.addEventListener("click", function () {
+      darkMenuSmInicial.classList.toggle("menuOculto");
+      darkMenuSmAction.classList.toggle("menuVisible");
+
+      darkMenuSmInicial.classList.remove("menuVisible");
+      darkMenuSmAction.classList.remove("menuOculto");
+      darkContainerOpc.classList.remove("hidden");
+    });
+
+    darkClose.addEventListener("click", function () {
+      darkMenuSmInicial.classList.toggle("menuVisible");
+      darkMenuSmAction.classList.toggle("menuOculto");
+
+      darkMenuSmAction.classList.remove("menuVisible");
+      darkMenuSmInicial.classList.remove("menuOculto");
+      darkContainerOpc.classList.toggle("hidden");
     });
   });
 </script>

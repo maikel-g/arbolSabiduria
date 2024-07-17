@@ -1,36 +1,44 @@
-<section class="flex flex-col justify-center items-center">
+<section class="flex flex-col justify-center items-center mt-10 md:mt-6">
   <div class="max-w-screen-xl w-full">
-    <h2 class="text-3xl text-center pt-[60px] pb-12 font-playfair">
-      Servicios de Apoyo
-    </h2>
+    <div class="px-8 md:px-16">
+      <h2
+        class="text-2xl lg:text-3xl 2xl:text-4xl text-center md:pt-6 2xl:pt-8 pb-6 lg:pb-12 font-playfair"
+      >
+        Servicios de Apoyo
+      </h2>
 
-    <hr class="border-2 border-[#896936] w-full mb-5" />
+      <hr class="border-2 border-[#896936] w-full mb-5" />
 
-    <h3 class="text-lg pb-8 font-playfair">
-      Ofrecemos servicios de apoyo que complementan nuestra atención médica
-      especializada, creando un ambiente seguro y cómodo donde los residentes
-      pueden prosperar y disfrutar de una vida plena.
-    </h3>
+      <h3
+        class="text-sm md:text-base lg:text-lg pb-8 font-playfair px-4 md:px-0"
+      >
+        Ofrecemos servicios de apoyo que complementan nuestra atención médica
+        especializada, creando un ambiente seguro y cómodo donde los residentes
+        pueden prosperar y disfrutar de una vida plena.
+      </h3>
+    </div>
 
-    <div class="text-sm font-medium text-gray-500 px-16">
-      <ul class="flex flex-wrap -mb-px gap-7">
+    <div class="text-sm font-medium text-gray-500 px-8 md:px-16">
+      <ul
+        class="flex flex-wrap -mb-px gap-3 lg:gap-7 justify-center md:justify-start px-8 md:px-0"
+      >
         <li class="me-2">
           <button
-            onclick="mostarInfo(this)"
+            onclick="mostarInfoSupportingServices(this)"
             class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 botonCocina"
             >Cocina</button
           >
         </li>
         <li class="me-2">
           <button
-            onclick="mostarInfo(this)"
+            onclick="mostarInfoSupportingServices(this)"
             class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
             >Asistentes de cuido personal</button
           >
         </li>
         <li class="me-2">
           <button
-            onclick="mostarInfo(this)"
+            onclick="mostarInfoSupportingServices(this)"
             class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
             >Miscelánea</button
           >
@@ -38,31 +46,42 @@
       </ul>
     </div>
 
-    <div class="contenidoDiv px-16">
-      <div class="pt-9 h-[165px]">
-        <h2 class="text-2xl font-playfair">
-          Nutrición de calidad, amor en cada plato
-        </h2>
-        <br />
-        <p class="text-base font-montse">
-          La nutrición es fundamental para la salud y el bienestar de nuestros
-          residentes. Nuestro equipo de cocina prepara comidas nutritivas y
-          deliciosas, teniendo en cuenta las preferencias individuales y las
-          necesidades dietéticas específicas de cada residente. Nos esforzamos
-          por ofrecer una experiencia culinaria que satisfaga tanto el paladar
-          como las necesidades nutricionales.
-        </p>
+    <div class="contenido px-16 lg:px-32 h-fit md:mb-0 lg:mb-8 2xl:mb-0">
+      <div class="contenidoDiv">
+        <div class="pt-9">
+          <h2 class="text-xl md:text-2xl font-playfair">
+            Nutrición de calidad, amor en cada plato
+          </h2>
+          <br />
+          <p class="text-xs md:text-sm lg:text-base font-montse">
+            La nutrición es fundamental para la salud y el bienestar de nuestros
+            residentes. Nuestro equipo de cocina prepara comidas nutritivas y
+            deliciosas, teniendo en cuenta las preferencias individuales y las
+            necesidades dietéticas específicas de cada residente. Nos esforzamos
+            por ofrecer una experiencia culinaria que satisfaga tanto el paladar
+            como las necesidades nutricionales.
+          </p>
+        </div>
       </div>
     </div>
   </div>
+
   <section
-    class="hero-section mt-14 pt-28 pb-20 w-full flex justify-center items-center gap-52"
+    class="hero-section mt-10 md:mt-14 lg:mt-12 pt-28 pb-[100px] md:pt-20 md:pb-16 lg:pb-20 lg:pt-28 w-full flex justify-center items-center gap-10 md:gap-20 lg:gap-20 2xl:gap-28 px-8 md:px-0 h-[200px] md:h-auto"
   >
     <div class="flex justify-center flex-col items-center">
-      <img src="/miscelanea.png" alt="" srcset="" class="w-full" />
+      <img
+        src="/miscelanea.png"
+        alt=""
+        class="w-[120px] h-[110px] mobileL:w-[135px] mobileL:h-[130px] md:w-[235px] md:h-[210px] lg:h-[250px] lg:w-[90%] 2xl:h-[300px] 2xl:w-full"
+      />
     </div>
     <div class="flex justify-center flex-col items-center">
-      <img src="/cocineros.png" alt="" srcset="" class="w-full" />
+      <img
+        src="/cocineros.png"
+        alt=""
+        class="w-[120px] h-[110px] mobileL:w-[135px] mobileL:h-[130px] md:w-[235px] md:h-[210px] lg:h-[250px] lg:w-[90%] 2xl:h-[300px] 2xl:w-full"
+      />
     </div>
   </section>
 </section>
@@ -91,9 +110,7 @@
 </style>
 
 <script is:inline>
-  // Función para mostarInfo información y aplicar estilos a la opción seleccionada
-  function mostarInfo(boton) {
-    console.log("ejecutado");
+  function mostarInfoSupportingServices(boton) {
     // Remover estilos activos de todos los botones
     var botones = document.querySelectorAll(".text-sm button");
     botones.forEach(function (boton) {
@@ -108,29 +125,29 @@
     switch (boton.textContent) {
       case "Cocina":
         contenido =
-          '<div class="pt-9 h-[165px]">' +
-          '<h2 class="text-2xl font-playfair">Nutrición de calidad, amor en cada plato</h2>' +
+          '<div class="pt-9">' +
+          '<h2 class="text-xl md:text-2xl font-playfair">Nutrición de calidad, amor en cada plato</h2>' +
           "<br />" +
-          '<p class="text-base font-montse">' +
+          '<p class="text-xs md:text-sm lg:text-base font-montse ">' +
           "La nutrición es fundamental para la salud y el bienestar de nuestros residentes. Nuestro equipo de cocina prepara comidas nutritivas y deliciosas, teniendo en cuenta las preferencias individuales y las necesidades dietéticas específicas de cada residente. Nos esforzamos por ofrecer una experiencia culinaria que satisfaga tanto el paladar como las necesidades nutricionales.";
 
         "</p>" + "</div>";
         break;
       case "Asistentes de cuido personal":
         contenido =
-          '<div class="pt-9 h-[165px]">' +
-          '<h2 class="text-2xl font-playfair">Asistentes de cuido personal </h2>' +
+          '<div class="pt-9">' +
+          '<h2 class="text-xl md:text-2xl font-playfair">Asistentes de cuido personal </h2>' +
           "<br />" +
-          '<p class="text-base font-montse">' +
+          '<p class="text-xs md:text-sm lg:text-base font-montse ">' +
           "Nuestros asistentes de cuidado personal están disponibles para brindar apoyo personalizado en las actividades diarias. Desde ayudar con la movilidad y la higiene personal hasta brindar compañía y apoyo emocional, nuestro equipo está comprometido a proporcionar una atención integral y respetuosa que promueva la autonomía y la calidad de vida de nuestros residentes.";
         "</p>" + "</div>";
         break;
       case "Miscelánea":
         contenido =
-          '<div class="pt-9 h-[165px]">' +
-          '<h2 class="text-2xl font-playfair">La atención a los detalles marca la diferencia</h2>' +
+          '<div class="pt-9">' +
+          '<h2 class="text-xl md:text-2xl font-playfair">La atención a los detalles marca la diferencia</h2>' +
           "<br />" +
-          '<p class="text-base font-montse">' +
+          '<p class="text-xs md:text-sm lg:text-base font-montse ">' +
           "Nuestro equipo de miscelánea está dedicado a garantizar un ambiente limpio y acogedor en todo momento. Desde tareas de limpieza hasta el mantenimiento del orden. Nos encargamos de cada detalle para que nuestros residentes se sientan cómodos y seguros en su hogar.";
         "</p>" + "</div>";
         break;

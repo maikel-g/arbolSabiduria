@@ -1,6 +1,8 @@
 ---
 import LogoClaro from "./icons/LogoClaro.astro";
 import LogoClaroCircular from "./icons/LogoClaroCircular.astro";
+import LogoOscuro from "./icons/LogoOscuro.astro";
+import LogoOscuroCircular from "./icons/LogoOscuroCircular.astro";
 
 interface Props {
   fontColor: string;
@@ -110,7 +112,7 @@ const { fontColor, iconMenuColor } = Astro.props;
       <a href="/MedicalAttention">Atención médica</a>
       <a href="/Activities">Actividades</a>
 
-      <LogoClaro width="78px" height="90px" id="logoClaroHeaders" />
+      <LogoClaroCircular width="70px" height="70px" id="logoLg" />
 
       <a href="/Services">Servicios</a>
       <a href="/AboutUs">Quiénes somos</a>
@@ -138,8 +140,7 @@ const { fontColor, iconMenuColor } = Astro.props;
             <ion-icon
               id="darkClose"
               name="close"
-              class="text-3xl cursor-pointer text-white text-gray-700"
-            ></ion-icon>
+              class="text-3xl cursor-pointer text-white"></ion-icon>
           </div>
         </div>
         <div id="darkContainerOpc" class="flex justify-center pb-6 hidden">

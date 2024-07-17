@@ -5,9 +5,10 @@ interface Props {
   paddingHorizontales: String;
   paddingVerticales: String;
   menssage: String;
+  link?: String;
 }
 
-const { color, paddingHorizontales, paddingVerticales, width, menssage } =
+const { color, paddingHorizontales, paddingVerticales, width, menssage, link } =
   Astro.props;
 ---
 
@@ -34,10 +35,12 @@ const { color, paddingHorizontales, paddingVerticales, width, menssage } =
     </svg>
   </a>
 </div> -->
-<button
-  class=`bg-[#${color}] text-[#fff]  py-${paddingVerticales}  px-${paddingHorizontales} ${width} rounded-lg mt-4 shadow-lg`
-  >{menssage}
-</button>
+<a
+  href=`${link}`
+  class=`bg-[#${color}] text-[#fff]  py-${paddingVerticales}  px-${paddingHorizontales} ${width} rounded-lg mt-4 shadow-lg text-center`
+>
+  {menssage}
+</a>
 <style>
   a {
     font-family: "Work Sans Variable", sans-serif;
